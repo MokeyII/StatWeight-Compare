@@ -68,6 +68,7 @@
             this.cmbClass.Name = "cmbClass";
             this.cmbClass.Size = new System.Drawing.Size(121, 21);
             this.cmbClass.TabIndex = 0;
+            this.cmbClass.SelectedIndexChanged += new System.EventHandler(this.cmbClass_SelectedIndexChanged);
             // 
             // cmbSubClass
             // 
@@ -80,6 +81,7 @@
             this.cmbSubClass.Name = "cmbSubClass";
             this.cmbSubClass.Size = new System.Drawing.Size(121, 21);
             this.cmbSubClass.TabIndex = 1;
+            this.cmbSubClass.SelectedIndexChanged += new System.EventHandler(this.cmbSubClass_SelectedIndexChanged);
             // 
             // lblClass
             // 
@@ -105,7 +107,7 @@
             this.cmbPreLoad1.Items.AddRange(new object[] {
             "Pre-Load1",
             "Pre-Load2"});
-            this.cmbPreLoad1.Location = new System.Drawing.Point(82, 129);
+            this.cmbPreLoad1.Location = new System.Drawing.Point(82, 82);
             this.cmbPreLoad1.Name = "cmbPreLoad1";
             this.cmbPreLoad1.Size = new System.Drawing.Size(121, 21);
             this.cmbPreLoad1.TabIndex = 4;
@@ -117,7 +119,7 @@
             this.cmbPreLoad2.Items.AddRange(new object[] {
             "Pre-Load1",
             "Pre-Load2"});
-            this.cmbPreLoad2.Location = new System.Drawing.Point(378, 129);
+            this.cmbPreLoad2.Location = new System.Drawing.Point(378, 82);
             this.cmbPreLoad2.Name = "cmbPreLoad2";
             this.cmbPreLoad2.Size = new System.Drawing.Size(121, 21);
             this.cmbPreLoad2.TabIndex = 5;
@@ -125,42 +127,42 @@
             // 
             // txtValue1
             // 
-            this.txtValue1.Location = new System.Drawing.Point(82, 192);
+            this.txtValue1.Location = new System.Drawing.Point(82, 145);
             this.txtValue1.Name = "txtValue1";
             this.txtValue1.Size = new System.Drawing.Size(100, 20);
             this.txtValue1.TabIndex = 6;
             // 
             // txtValue3
             // 
-            this.txtValue3.Location = new System.Drawing.Point(82, 244);
+            this.txtValue3.Location = new System.Drawing.Point(82, 197);
             this.txtValue3.Name = "txtValue3";
             this.txtValue3.Size = new System.Drawing.Size(100, 20);
             this.txtValue3.TabIndex = 7;
             // 
             // txtValue2
             // 
-            this.txtValue2.Location = new System.Drawing.Point(82, 218);
+            this.txtValue2.Location = new System.Drawing.Point(82, 171);
             this.txtValue2.Name = "txtValue2";
             this.txtValue2.Size = new System.Drawing.Size(100, 20);
             this.txtValue2.TabIndex = 8;
             // 
             // txtValue22
             // 
-            this.txtValue22.Location = new System.Drawing.Point(378, 218);
+            this.txtValue22.Location = new System.Drawing.Point(378, 171);
             this.txtValue22.Name = "txtValue22";
             this.txtValue22.Size = new System.Drawing.Size(100, 20);
             this.txtValue22.TabIndex = 11;
             // 
             // txtValue23
             // 
-            this.txtValue23.Location = new System.Drawing.Point(378, 244);
+            this.txtValue23.Location = new System.Drawing.Point(378, 197);
             this.txtValue23.Name = "txtValue23";
             this.txtValue23.Size = new System.Drawing.Size(100, 20);
             this.txtValue23.TabIndex = 10;
             // 
             // txtValue21
             // 
-            this.txtValue21.Location = new System.Drawing.Point(378, 192);
+            this.txtValue21.Location = new System.Drawing.Point(378, 145);
             this.txtValue21.Name = "txtValue21";
             this.txtValue21.Size = new System.Drawing.Size(100, 20);
             this.txtValue21.TabIndex = 9;
@@ -168,7 +170,7 @@
             // lblPreLoad1
             // 
             this.lblPreLoad1.AutoSize = true;
-            this.lblPreLoad1.Location = new System.Drawing.Point(20, 132);
+            this.lblPreLoad1.Location = new System.Drawing.Point(20, 85);
             this.lblPreLoad1.Name = "lblPreLoad1";
             this.lblPreLoad1.Size = new System.Drawing.Size(56, 13);
             this.lblPreLoad1.TabIndex = 12;
@@ -177,7 +179,7 @@
             // lblPreLoad2
             // 
             this.lblPreLoad2.AutoSize = true;
-            this.lblPreLoad2.Location = new System.Drawing.Point(316, 132);
+            this.lblPreLoad2.Location = new System.Drawing.Point(316, 85);
             this.lblPreLoad2.Name = "lblPreLoad2";
             this.lblPreLoad2.Size = new System.Drawing.Size(56, 13);
             this.lblPreLoad2.TabIndex = 13;
@@ -186,7 +188,7 @@
             // lblValue1
             // 
             this.lblValue1.AutoSize = true;
-            this.lblValue1.Location = new System.Drawing.Point(30, 195);
+            this.lblValue1.Location = new System.Drawing.Point(30, 148);
             this.lblValue1.Name = "lblValue1";
             this.lblValue1.Size = new System.Drawing.Size(46, 13);
             this.lblValue1.TabIndex = 14;
@@ -195,7 +197,7 @@
             // lblValue2
             // 
             this.lblValue2.AutoSize = true;
-            this.lblValue2.Location = new System.Drawing.Point(30, 221);
+            this.lblValue2.Location = new System.Drawing.Point(30, 174);
             this.lblValue2.Name = "lblValue2";
             this.lblValue2.Size = new System.Drawing.Size(46, 13);
             this.lblValue2.TabIndex = 15;
@@ -204,7 +206,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 247);
+            this.label2.Location = new System.Drawing.Point(30, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 16;
@@ -213,7 +215,7 @@
             // lblValue21
             // 
             this.lblValue21.AutoSize = true;
-            this.lblValue21.Location = new System.Drawing.Point(326, 195);
+            this.lblValue21.Location = new System.Drawing.Point(326, 148);
             this.lblValue21.Name = "lblValue21";
             this.lblValue21.Size = new System.Drawing.Size(46, 13);
             this.lblValue21.TabIndex = 17;
@@ -222,7 +224,7 @@
             // lblValue22
             // 
             this.lblValue22.AutoSize = true;
-            this.lblValue22.Location = new System.Drawing.Point(326, 221);
+            this.lblValue22.Location = new System.Drawing.Point(326, 174);
             this.lblValue22.Name = "lblValue22";
             this.lblValue22.Size = new System.Drawing.Size(46, 13);
             this.lblValue22.TabIndex = 18;
@@ -231,7 +233,7 @@
             // lblValue23
             // 
             this.lblValue23.AutoSize = true;
-            this.lblValue23.Location = new System.Drawing.Point(326, 247);
+            this.lblValue23.Location = new System.Drawing.Point(326, 200);
             this.lblValue23.Name = "lblValue23";
             this.lblValue23.Size = new System.Drawing.Size(46, 13);
             this.lblValue23.TabIndex = 19;
@@ -239,7 +241,7 @@
             // 
             // btnWeigh
             // 
-            this.btnWeigh.Location = new System.Drawing.Point(222, 306);
+            this.btnWeigh.Location = new System.Drawing.Point(222, 259);
             this.btnWeigh.Name = "btnWeigh";
             this.btnWeigh.Size = new System.Drawing.Size(75, 23);
             this.btnWeigh.TabIndex = 20;
@@ -249,21 +251,21 @@
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(12, 335);
+            this.txtOutput.Location = new System.Drawing.Point(12, 288);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.Size = new System.Drawing.Size(537, 20);
             this.txtOutput.TabIndex = 21;
             // 
             // txtWeight1
             // 
-            this.txtWeight1.Location = new System.Drawing.Point(82, 284);
+            this.txtWeight1.Location = new System.Drawing.Point(82, 237);
             this.txtWeight1.Name = "txtWeight1";
             this.txtWeight1.Size = new System.Drawing.Size(100, 20);
             this.txtWeight1.TabIndex = 22;
             // 
             // txtWeight2
             // 
-            this.txtWeight2.Location = new System.Drawing.Point(378, 284);
+            this.txtWeight2.Location = new System.Drawing.Point(378, 237);
             this.txtWeight2.Name = "txtWeight2";
             this.txtWeight2.Size = new System.Drawing.Size(100, 20);
             this.txtWeight2.TabIndex = 23;
@@ -271,7 +273,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 287);
+            this.label1.Location = new System.Drawing.Point(30, 240);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 24;
@@ -280,7 +282,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(326, 287);
+            this.label3.Location = new System.Drawing.Point(326, 240);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 25;
@@ -290,7 +292,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 376);
+            this.ClientSize = new System.Drawing.Size(561, 328);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtWeight2);
@@ -327,7 +329,6 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cmbClass;
-        private System.Windows.Forms.ComboBox cmbSubClass;
         private System.Windows.Forms.Label lblClass;
         private System.Windows.Forms.Label lblSubClass;
         private System.Windows.Forms.ComboBox cmbPreLoad1;
@@ -352,6 +353,7 @@
         private System.Windows.Forms.TextBox txtWeight2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.ComboBox cmbSubClass;
     }
 }
 

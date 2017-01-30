@@ -10,11 +10,50 @@ namespace StatWeight_Compare
             InitializeComponent();
         }
 
-        private float a = 0.86F;
-        private float b = 1.04F;
-        private float c = 0.60F;
-        private float d = 0.86F;
-        private float f = 1.00F;
+        public float a;
+        public float b;
+        public float c;
+        public float d;
+        public float f;
+        
+
+        private void cmbClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void cmbSubClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSubClass.SelectedIndex == 0)
+            {
+                txtOutput.Text = ("class1 selected");
+                a = 1.00F;
+                b = 2.00F;
+                c = 3.00F;
+                d = 4.00F;
+                f = 5.00F;
+                
+            }
+            if (cmbSubClass.SelectedIndex == 1)
+            {
+                txtOutput.Text = ("class2 selected");
+                a = 0.00F;
+                b = 0.00F;
+                c = 0.00F;
+                d = 0.00F;
+                f = 0.00F;
+            }
+            if (cmbSubClass.SelectedIndex == 2)
+            {
+                txtOutput.Text = ("class3 selected");
+                a = 1.00F;
+                b = 1.00F;
+                c = 1.00F;
+                d = 1.00F;
+                f = 1.00F;
+
+            }
+        }
 
         private void cmbPreLoad1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -79,5 +118,7 @@ namespace StatWeight_Compare
                 txtOutput.Text = ("" + cmbPreLoad2.Text + " and " + cmbPreLoad1.Text + " Weigh the same!");
             }
         }
+
+
     }
 }
